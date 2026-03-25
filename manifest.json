@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon商品情報抽出ツール",
+  "version": "1.0",
+  "description": "Amazon検索結果から商品情報をCSV出力",
+  "permissions": ["activeTab", "downloads", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.co.jp/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
